@@ -9,7 +9,9 @@ export class Main {
 
   public launchApp() {
     this.router.handleRequest();
+    
   }
 }
 
-new Main().launchApp();
+new Main()
+.launchApp();

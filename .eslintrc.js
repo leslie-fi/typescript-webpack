@@ -17,5 +17,14 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint'],
+  rules: {
+    // turn on errors for missing imports
+    'import/no-unresolved': 'error',
+  },
+  plugins: ['@typescript-eslint', 'import'],
+  "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+      }
+  }
 };

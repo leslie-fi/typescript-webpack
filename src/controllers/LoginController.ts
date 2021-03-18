@@ -20,7 +20,7 @@ export class LoginController extends BaseController {
     if (this.userInput.value && this.pwInput.value) {
       this.resetErrorLabel();
       const result = await this.loginService.login(this.userInput.value, this.pwInput.value);
-      console.log(result)
+      console.log(`result is: ${result}`)
       if (result) {
         this.router.switchToDashboardView(result)
       } else {

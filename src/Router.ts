@@ -55,4 +55,5 @@ export class Router {
   private getRoute(): string {
     return window.location.pathname;
   }
+
 }

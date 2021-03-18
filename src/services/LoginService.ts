@@ -17,15 +17,17 @@ export class LoginService {
     };
 
     const RESULT = await fetch(LOGIN_URL, options);
+    let data = await RESULT.json()
+    
     try {
-      RESULT.json();
-      if (RESULT.status == 201) {
-        return RESULT.json();
+      if (data) {
+        return data;
       } else {
+        console.log(`undefined ${RESULT}`)
         return undefined;
       }
     } catch (err) {
-      console.error(err.stack, RESULT.json());
+      console.error(err.stack, data);
     }
   }
 }
